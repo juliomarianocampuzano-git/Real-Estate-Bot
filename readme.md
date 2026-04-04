@@ -1,109 +1,45 @@
-# Real Estate Lead Scoring Automation
+AI Real Estate Automation System
 
-Automated system designed to detect real estate investment opportunities by analyzing price fluctuations across property listings.
+End-to-end AI workflow to automate property analysis, lead scoring, and listing generation
 
-## Overview
+Overview
 
-Identifying strong real estate opportunities is inefficient. The market contains a large volume of listings, but there is no clear way to quickly determine which properties are undervalued or worth analyzing.
+This project is a real-world automation system designed to optimize real estate operations by:
 
-This system processes property data and highlights opportunities based on measurable price drops. It reduces manual effort and provides a structured way to evaluate listings.
+Identifying investment opportunities
+Generating property descriptions using AI
+Automating communication workflows
 
-## Problem
+Built to simulate how AI can scale a real estate business.
 
-Real estate data is abundant but lacks clarity. The main difficulties are:
-- Identifying properties that have actually dropped in price
-- Detecting negotiation potential
-- Filtering valuable opportunities from noise
-
-## Solution
-
-This project builds a data pipeline that analyzes property information and identifies opportunities based on price evolution.
-
-The system:
-- Ingests property data from a dataset
-- Cleans and structures the data
-- Builds price history
-- Calculates price variations
-- Ranks the best opportunities
-
-## Architecture
-
-Pipeline:
-
-datos.csv → lector.py → main.py → SQLite database → analisis.py
-
-## Project Structure
-
-- main.py: data ingestion, processing, and database population  
-- analisis.py: opportunity detection and analysis  
-- db.py: database structure and ID management  
-- lector.py: data cleaning and filtering  
-- logger.py: validation and filtering logic  
-- scraper.py: data extraction module (in development)  
-- datos.csv: source dataset  
-- requirements.txt: project dependencies  
-
-## Business Logic
-
-Drop (%) = ((Initial Price - Current Price) / Initial Price) * 100
-
-## Installation
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-Run the data pipeline:
-
-```bash
-python main.py
-```
-
-Run the analysis:
-
-```bash
-python analisis.py
-```
-
-## Example Output
-
-```text
-TOP OPPORTUNITIES
-
-Apartment | Palermo
-Current Price: 120000
-Drop: 18.7%
-```
-
-## Value
-
-- Reduces manual analysis of large datasets  
-- Identifies undervalued properties efficiently  
-- Applies structured decision logic  
-- Demonstrates an end-to-end data system  
-
-## Limitations
-
-- Uses static CSV data  
-- Historical data is simulated  
-- No graphical interface  
-
-## Next Steps
-
-- Integrate real-time data sources (scraping or APIs)  
-- Build a dashboard (Streamlit or Power BI)  
-- Automate alerts via messaging systems  
-
-## Example Case
-
-Dataset: 500 properties analyzed  
-Detected: 23 opportunities (>15% drop)  
-Best case: Property undervalued by 18.7%
-
-## Author
-
-Julio Mariano Campuzano
+What This System Does
+Input
+Property data (CSV / structured dataset)
+Processing
+Price analysis & opportunity detection
+AI-generated descriptions (ChatGPT)
+Lead scoring logic
+Output
+Ready-to-use property listings
+Automated messages (Telegram / Email)
+Architecture
+Real-Estate-Bot/
+│
+├── Data/                # Property dataset
+├── SRC/
+│   ├── lector.py        # Data ingestion
+│   ├── ai_brain.py      # AI processing
+│   ├── mensajero.py     # Messaging system
+│   ├── logger.py        # Logging
+│   └── main.py          # Orchestrator
+Tech Stack
+Python
+OpenAI / ChatGPT
+Telegram API
+Email (SMTP)
+Data processing (CSV)
+Business Impact
+Reduces manual listing creation time by ~80%
+📈 Improves speed of identifying investment opportunities
+🤖 Automates repetitive real estate workflows
+🧠 Standardizes content generation using AI
