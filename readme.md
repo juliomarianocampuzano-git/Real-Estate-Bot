@@ -98,6 +98,12 @@ Drop: 18.7%
 - Build a dashboard (Streamlit or Power BI)  
 - Automate alerts via messaging systems  
 
+## Example Case
+
+Dataset: 500 properties analyzed  
+Detected: 23 opportunities (>15% drop)  
+Best case: Property undervalued by 18.7%
+
 ## Author
 
 Julio Mariano Campuzano
